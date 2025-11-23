@@ -1,0 +1,71 @@
+# AI-102 Study Guide Extraction Tool - GitIgnore
+
+# Generated data files
+ai102_raw_data.json
+ai102_structured_data.json
+validated_data.json
+database_ready.csv
+change_log.csv
+statistics.json
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Downloaded/saved study guides
+study_guide.html
+study_guide.pdf
+*.htm
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+venv/
+env/
+ENV/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+*.log
+
+# Environment variables
+.env
+.env.local
+
+# Database credentials
+db_config.json
+credentials.json
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# User-specific annotation data
+*_annotated.json
+user_progress.json
