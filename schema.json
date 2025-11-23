@@ -1,0 +1,135 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AI-102 Study Guide Schema",
+  "description": "Schema for Microsoft AI-102 exam study guide structured data",
+  "type": "object",
+  "required": ["metadata", "topic_areas", "change_log"],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "required": ["exam_code", "exam_title", "extraction_date"],
+      "properties": {
+        "exam_code": {
+          "type": "string",
+          "pattern": "^AI-102$",
+          "description": "Exam code identifier"
+        },
+        "exam_title": {
+          "type": "string",
+          "description": "Full exam title"
+        },
+        "extraction_date": {
+          "type": "string",
+          "format": "date-time",
+          "description": "ISO 8601 timestamp of when data was extracted"
+        },
+        "source_url": {
+          "type": "string",
+          "format": "uri",
+          "description": "URL of the source study guide"
+        },
+        "source_file": {
+          "type": "string",
+          "description": "Path to source file if extracted from local file"
+        },
+        "exam_update_date": {
+          "type": "string",
+          "description": "Date when exam was last updated"
+        }
+      }
+    },
+    "topic_areas": {
+      "type": "array",
+      "description": "Main topic areas covered in the exam",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["topic_area", "percentage_weight", "skills"],
+        "properties": {
+          "topic_area": {
+            "type": "string",
+            "description": "Name of the topic area"
+          },
+          "percentage_weight": {
+            "type": "string",
+            "pattern": "^\\d+[-–]\\d+%$",
+            "description": "Percentage weight of this topic (e.g., '20-25%')"
+          },
+          "skills": {
+            "type": "array",
+            "description": "Skills within this topic area",
+            "items": {
+              "type": "object",
+              "required": ["skill", "sub_skills"],
+              "properties": {
+                "skill": {
+                  "type": "string",
+                  "description": "Name of the skill"
+                },
+                "sub_skills": {
+                  "type": "array",
+                  "description": "Detailed sub-skills and requirements",
+                  "items": {
+                    "type": "object",
+                    "required": ["sub_skill", "reference_links", "annotation"],
+                    "properties": {
+                      "sub_skill": {
+                        "type": "string",
+                        "description": "Detailed description of the sub-skill"
+                      },
+                      "reference_links": {
+                        "type": "array",
+                        "description": "Links to documentation or resources",
+                        "items": {
+                          "type": "string",
+                          "format": "uri"
+                        },
+                        "default": []
+                      },
+                      "annotation": {
+                        "type": "string",
+                        "description": "User annotation for study notes or gamification status",
+                        "default": ""
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "change_log": {
+      "type": "array",
+      "description": "History of changes to the exam",
+      "items": {
+        "type": "object",
+        "required": ["change_description"],
+        "properties": {
+          "change_description": {
+            "type": "string",
+            "description": "Description of what changed"
+          },
+          "change_date": {
+            "type": "string",
+            "description": "When the change occurred"
+          },
+          "change_type": {
+            "type": "string",
+            "enum": ["Major", "Minor", "Update", "Addition", "Removal"],
+            "description": "Type of change"
+          },
+          "skill_prior": {
+            "type": "string",
+            "description": "Skill name before the change"
+          },
+          "skill_current": {
+            "type": "string",
+            "description": "Skill name after the change"
+          }
+        }
+      }
+    }
+  }
+}

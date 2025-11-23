@@ -1,0 +1,91 @@
+{
+  "metadata": {
+    "exam_code": "AI-102",
+    "exam_title": "Designing and Implementing a Microsoft Azure AI Solution",
+    "extraction_date": "2025-11-23T00:00:00Z",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-102",
+    "exam_update_date": "April 2025"
+  },
+  "topic_areas": [
+    {
+      "topic_area": "Plan and manage an Azure AI solution",
+      "percentage_weight": "20-25%",
+      "skills": [
+        {
+          "skill": "Select the appropriate Azure AI Foundry services",
+          "sub_skills": [
+            {
+              "sub_skill": "Select the appropriate service for a generative AI solution",
+              "reference_links": ["https://learn.microsoft.com/azure/ai-services/"],
+              "annotation": ""
+            },
+            {
+              "sub_skill": "Select the appropriate service for a computer vision solution",
+              "reference_links": [],
+              "annotation": ""
+            },
+            {
+              "sub_skill": "Select the appropriate service for a natural language processing solution",
+              "reference_links": [],
+              "annotation": ""
+            },
+            {
+              "sub_skill": "Select the appropriate service for a speech solution",
+              "reference_links": [],
+              "annotation": ""
+            },
+            {
+              "sub_skill": "Select the appropriate service for a document intelligence solution",
+              "reference_links": [],
+              "annotation": ""
+            },
+            {
+              "sub_skill": "Select the appropriate service for a knowledge mining solution",
+              "reference_links": [],
+              "annotation": ""
+            }
+          ]
+        },
+        {
+          "skill": "Plan, create and deploy an Azure AI Foundry service",
+          "sub_skills": [
+            {
+              "sub_skill": "Plan for a solution that meets Responsible AI principles",
+              "reference_links": [],
+              "annotation": ""
+            },
+            {
+              "sub_skill": "Create an Azure AI Foundry resource",
+              "reference_links": [],
+              "annotation": ""
+            },
+            {
+              "sub_skill": "Determine a default endpoint for a service",
+              "reference_links": [],
+              "annotation": ""
+            },
+            {
+              "sub_skill": "Integrate Azure AI services into a continuous integration and continuous delivery (CI/CD) pipeline",
+              "reference_links": [],
+              "annotation": ""
+            },
+            {
+              "sub_skill": "Plan and implement a container deployment",
+              "reference_links": [],
+              "annotation": ""
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "change_log": [
+    {
+      "change_description": "Azure AI Foundry is now Microsoft Foundry",
+      "change_date": "April 2025",
+      "change_type": "Major",
+      "skill_prior": "Azure AI Foundry services",
+      "skill_current": "Microsoft Foundry services"
+    }
+  ]
+}
